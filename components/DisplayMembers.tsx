@@ -15,18 +15,20 @@ interface MemberData {
 const cacheKey = 'marinenationaleMembers';
 const cacheExpiry = 24 * 60 * 60 * 1000;
 
+function getPortraitPath(login: string): string {
+  return `/static/portraits/${login}.png`;
+}
+
 const memberRoles: Record<string, string> = {
-  Bravomanbravo212: 'Project Manager',
-  khaosen: 'Lead Programmer',
-  maxy: 'Quality Assurance'
+  bravocreed: 'Project Manager',
+  ImperialMaris: 'Lead Programmer'
 };
 
-const priorityOrder = ['khaosen', 'LukeWasTakenn'];
+const priorityOrder = ['ImperialMaris', 'bravocreed'];
 
 const fallbackMembers: GithubMember[] = [
-  { login: 'Bravomanbravo212', avatar_url: 'https://github.com/Bravomanbravo212.png' },
-  { login: 'khaosen', avatar_url: 'https://github.com/khaosen.png' },
-  { login: 'maxy', avatar_url: 'https://github.com/maxymillian.png' }
+  { login: 'bravocreed', avatar_url: 'https://github.com/Bravomanbravo212.png' },
+  { login: 'ImperialMaris', avatar_url: 'https://github.com/khaosen.png' }
 ];
 
 function getEmptyMemberData(): MemberData {
@@ -128,7 +130,7 @@ const DisplayMembers = () => {
           {members.data.map((member) => (
             <MemberLink
               key={member.login}
-              image={member.avatar_url}
+              image={getPortraitPath(member.login)}
               name={member.login}
               role={memberRoles[member.login] || 'Member'}
             />
