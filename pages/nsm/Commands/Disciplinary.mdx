@@ -1,0 +1,61 @@
+import { Callout } from 'nextra/components';
+
+---
+Disciplinary Commands
+---
+
+## /addstrike
+
+Opens a Discord Form.
+
+```
+/addstrike
+```
+
+**Required Permission**
+- Sheet Administrator
+
+## /editstrike
+
+Edits variables of the strike linked with the given Strike ID.
+
+```
+/editstrike strikeId
+```
+
+**Parameters**
+- strikeId: `ID of the strike`
+
+**Required Permission**
+- Sheet Administrator
+
+## /deletestrike
+
+Deletes the strike linked with the given Strike ID.
+
+<Callout type="error">
+
+This command is NOT for marking a appealed/removed strike as inactive, or to edit a strike's variables. This command is ONLY for deleting bugged strikes. **Example usage; deleting a strike that was accidentally created.**
+
+</Callout>
+
+```
+/deletestrike strikeId
+```
+
+**Parameters**
+- strikeId: `ID of the strike`
+
+**Required Permission**
+- Sheet Administrator
+
+## /evidences
+
+Allows you to view evidences of the strike linked with the given Strike ID.
+
+```
+/evidences strikeId
+```
+
+**Required Permission**
+- Sheet Administrator

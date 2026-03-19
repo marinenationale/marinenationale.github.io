@@ -1,0 +1,94 @@
+import { Callout, Tabs } from 'nextra/components';
+
+# Configuring & Setting Up the Application
+
+<Callout type="warning">
+
+This page is towards Divisional Commanders.
+
+</Callout>
+
+While applications Server Configurations are only editable by engineers, you are free to request a configure change.
+
+## Setting up the Bot
+
+Start by filling in the sample config and sending it to khaosen via Discord.
+
+## Permissions
+
+Permission roles are centralized and **may not** be configured. These roles are;
+- Sheet Administrator
+- Sheet Moderator
+- Event Manager
+
+Keep in mind all role names are case sensetive. To see which role may see which commands, check out the commands section.
+
+## Sample Sheet
+
+Bot requires three (3) pages to work. These are:
+- 'BACKEND'
+- 'BACKEND RECORDS'
+- 'EMPLOYMENT RECORDS'
+
+Backend is used to contain active personnel data while Backend Records is used to contain disciplinary action data.
+Employment Records are used to contain former employments. (ie. discharged personnel)
+
+<Callout type="warning">
+
+All three of the pages must be in 1/1 match with the linked sample sheet, except qualifications, which may be customized. [Click me for the sample sheet.](https://docs.google.com/spreadsheets/d/15HdG_llgZhpjH6lqVhQDPofIk70Go5jVDTdQ5N06d2o/edit?usp=sharing)
+
+</Callout>
+
+<Callout type="warning">
+
+Second rows of each page must stay as it is. (ie, "dont delete me" written on all columns.)
+
+</Callout>
+
+<Callout type="error">
+
+In NO circumstances you should manually edit any Google Spreadsheet Pages used by the bot. Shall it be required, contact one of our engineers.
+
+</Callout>
+
+## Sample Config
+
+```json
+"1481691356396261599" : { // Server ID
+  "mainGroupId": "466475110", // Main divisional Groups' ROBLOX ID (Not the Armed Forces Group)
+  
+  "notificationsChannelId": "1482007327602114661",
+  "eventsChannelId": "1481731465409466581",
+  "loaChannelId": "1482008728608706600",
+  "fundChannelId": "1482053107105136700",
+  
+  "eventLogsChannelId": "1481758731057365013",
+  "loaLogsChannelId": "1482033692208529488",
+  "fundLogsChannelId": "1482061071056637983",
+  
+  "spreadSheetLink": "11TsBcakOueCCR5unheGbtTXQiFAyTFqzoP-GDWd2uQU",
+  // ^ https://docs.google.com/spreadsheets/d/ HERE --> 11TsBcakOueCCR5unheGbtTXQiFAyTFqzoP-GDWd2uQU
+
+  "qualifications": ["Medical", "Designated Marksman", "Public Order", "Light Machine Gun", "GSIM Operator"],
+  // ^ Names must 1/1 match the ones listed in trainings & the ones in header-rows in the Spreadsheet Pages.
+
+  "trainingData": {
+    "Basic Training": {
+      "description": "Required to promote to OR-3.",
+      "requirements": "N/A",
+      "ping": "@everyone", // Role ID or simply @everyone
+      "qualification": "Medical"
+    },
+    
+    "Advanced Training": {
+      "description": "Required to promote to OR-4.",
+      "requirements": "OR-3",
+      "ping": "1481741012173983774" // Role ID or simply @everyone
+    }
+  },
+  
+  "commandRoles": {
+    "1482017554766631053": "1482017554179293328" // Squadron role ID --> Command role ID
+  }
+}
+```
