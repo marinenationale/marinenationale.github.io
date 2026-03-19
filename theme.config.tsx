@@ -60,7 +60,7 @@ const config: DocsThemeConfig = {
     link: 'https://github.com/marinenationale/Naval-Systems-Manager',
   },
   chat: {
-    link: 'https://discord.gg/9JtmUEJEfW',
+    link: 'https://discord.gg/9JtmUEJEfv',
   },
   docsRepositoryBase: 'https://github.com/marinenationale/marinenationale.github.io/blob/main',
   feedback: {
