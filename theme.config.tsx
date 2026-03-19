@@ -57,7 +57,7 @@ const config: DocsThemeConfig = {
     </div>
   ),
   project: {
-    link: 'https://github.com/marinenationale/marinenationale.github.io',
+    link: 'https://github.com/marinenationale/Naval-Systems-Manager',
   },
   chat: {
     link: 'https://discord.gg/9JtmUEJEfW',
