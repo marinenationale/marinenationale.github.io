@@ -26,7 +26,7 @@ const priorityOrder = ['khaosen', 'LukeWasTakenn'];
 const fallbackMembers: GithubMember[] = [
   { login: 'Bravomanbravo212', avatar_url: 'https://github.com/Bravomanbravo212.png' },
   { login: 'khaosen', avatar_url: 'https://github.com/khaosen.png' },
-  { login: 'maxy', avatar_url: 'https://github.com/maxy.png' }
+  { login: 'maxy', avatar_url: 'https://github.com/maxymillian.png' }
 ];
 
 function getEmptyMemberData(): MemberData {
