@@ -70,7 +70,7 @@ const config: DocsThemeConfig = {
     text: null,
   },
   footer: {
-    text: 'Marine Nationale - Systems Documentation',
+    text: 'Marine Nationale - Naval Engineership Products Documentation',
   },
   search: {
     component: <Search />,
