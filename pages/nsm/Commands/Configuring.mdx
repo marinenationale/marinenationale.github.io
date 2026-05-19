@@ -1,0 +1,60 @@
+import { Callout } from 'nextra/components';
+
+---
+Configuration Commands
+---
+
+## /viewconfig
+
+Shows the current configuration. Includes channels, permissions and more.
+
+```
+/viewconfig
+```
+
+**Required Permission**
+- Administrator Permissions Inside the Server
+
+## /setchannel
+
+Sets the specified channel type to the mentioned channel.
+
+<Callout type="warning">
+
+Use `/viewconfig` to see list of available channel types.
+
+</Callout>
+
+```
+/setchannel channelType channel
+```
+
+**Parameters**
+- channelType: `Type of the channel to set`
+- channel: `Mention of the channel`
+
+**Required Permission**
+- Administrator Permissions Inside the Server
+
+## /setpermission
+
+Grants/revokes a specific permission from the mentioned role.
+
+<Callout type="warning">
+
+Use `/viewconfig` to see list of available permissions.
+
+</Callout>
+
+```
+/setpermission role permission status
+```
+
+**Parameters**
+- role: `Mention of the role`
+- permission: `Permission to grant/revoke`
+- status: `Active/Inactive`
+
+
+**Required Permission**
+- Administrator Permissions Inside the Server
